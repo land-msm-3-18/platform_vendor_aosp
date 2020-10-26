@@ -127,6 +127,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Exchange2
 
+# Flipendo
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
+
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/aosp/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
@@ -179,3 +184,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG := false
+
+# Inherit from sepolicy config
+$(call inherit-product, vendor/awaken/config/sepolicy.mk)
