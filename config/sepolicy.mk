@@ -16,3 +16,5 @@
 
 BOARD_SEPOLICY_DIRS += \
 	vendor/aosp/sepolicy/vendor
+	hardware/google/pixel-sepolicy/flipendo \
+	hardware/google/pixel-sepolicy/turbo_adapter
